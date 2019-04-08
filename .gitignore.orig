@@ -1,5 +1,9 @@
 /bin
 /.DS_Store
+<<<<<<< HEAD
+/build/
+/.idea/
+=======
 ### Example user template template
 ### Example user template
 
@@ -9,4 +13,4 @@
 out
 gen
 /build/
-/.idea/
+>>>>>>> 69196b53b56e16886416e6f364f9989474599fc8
