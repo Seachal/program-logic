@@ -28,9 +28,13 @@ public class GenericDemo {
 
 		// 字段 - 泛型类型
 		Field fu = cls.getDeclaredField("u");
-		System.out.println(fu.getGenericType());
+		System.out.println("字段 u - 泛型类型:"+fu.getGenericType());
 
-		// 字段 - 参数化的类型
+		Field fv = cls.getDeclaredField("v");
+		System.out.println("字段 v- 泛型类型:"+fv.getGenericType());
+
+
+		// 字段 - 参数化的类型 (list中的参数化类型)
 		Field flist = cls.getDeclaredField("list");
 		Type listType = flist.getGenericType();
 		if (listType instanceof ParameterizedType) {
