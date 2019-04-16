@@ -14,6 +14,7 @@ public class WaitThread extends Thread {
             System.out.println("fired");
         } catch (InterruptedException e) {
         }
+
     }
 
     public synchronized void fire() {
@@ -24,8 +25,10 @@ public class WaitThread extends Thread {
     public static void main(String[] args) throws InterruptedException {
         WaitThread waitThread = new WaitThread();
         waitThread.start();
+//        seachal annotation 主线程休眠，
         Thread.sleep(1000);
         System.out.println("fire");
         waitThread.fire();
+
     }
 }
