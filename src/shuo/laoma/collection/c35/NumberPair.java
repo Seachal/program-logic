@@ -14,5 +14,11 @@ public class NumberPair<U extends Number, V extends Number> extends Pair<U, V> {
     public static void main(String[] args){
     	NumberPair<Integer, Double> pair = new NumberPair<>(10, 12.34);
     	double sum = pair.sum();
+//    	seachal add:
+    	System.out.println("sum:"+sum);
     }
 }    
+/**
+ *
+ * seachal  add
+ * */
