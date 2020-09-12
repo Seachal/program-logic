@@ -73,6 +73,7 @@ public class DynamicArray<E> {
      * @param args
      */
     public static void main(String[] args) {
+//       它容纳的数据类型是作为参数传递过来的, 比如,存放 Number:
         DynamicArray<Number> numbers = new DynamicArray<>();
         DynamicArray<Integer> ints = new DynamicArray<>();
         ints.add(100);

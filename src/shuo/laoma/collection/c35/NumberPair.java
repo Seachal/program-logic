@@ -12,6 +12,7 @@ public class NumberPair<U extends Number, V extends Number> extends Pair<U, V> {
     }
     
     public static void main(String[] args){
+//        sca: 例如把 10 改为"10"就会报错。
     	NumberPair<Integer, Double> pair = new NumberPair<>(10, 12.34);
     	double sum = pair.sum();
 //    	seachal add:
