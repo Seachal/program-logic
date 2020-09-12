@@ -23,6 +23,11 @@ public class ContainerDemo {
 		if(b == a.getB()){
 			System.out.println("SimpleContainer2: same instances");
 		}
+
+		System.out.println("======");
+		ServiceA a2 =  new  ServiceA();
+		a2.callB();
+
 	}
 	
 	public static void main(String[] args) {
