@@ -1,5 +1,9 @@
 package shuo.laoma.concurrent.c65;
 
+
+/**
+ * 15-2  竞态条件示例
+ */
 public class CounterThread extends Thread {
     private static int  counter = 0;
     

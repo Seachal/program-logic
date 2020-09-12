@@ -1,8 +1,6 @@
 package shuo.laoma.concurrent.c65;
 
 
-import shuo.laoma.concurrent.c66.Counter4;
-
 /*
  *  seachal
  */
