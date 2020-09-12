@@ -20,17 +20,24 @@ public class LinkedHashMapDemo {
 	}
 	
 	public static void byaccess(){
+//		16是初始大小
 		Map<String,Integer> accessMap = new LinkedHashMap<>(16, 0.75f, true);
 
 		accessMap.put("c", 100);
 		accessMap.put("d", 200);
 		accessMap.put("a", 500);
+		accessMap.put("e", 501);
+		accessMap.put("f", 502);
+		accessMap.put("g", 503);
 		accessMap.get("c");
 		accessMap.put("d", 300);
 
 		for(Entry<String,Integer> entry : accessMap.entrySet()){
 		    System.out.println(entry.getKey()+" "+entry.getValue());
 		}
+
+
+
 	}
 	
 	/**
@@ -38,7 +45,9 @@ public class LinkedHashMapDemo {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		basic();
+		System.out.println("----------");
+		byaccess();
 	}
 
 }

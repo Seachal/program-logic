@@ -13,7 +13,8 @@ public class LRUCache<K, V> extends LinkedHashMap<K, V> {
         super(16, 0.75f, true);
         this.maxEntries = maxEntries;
     }
-    
+
+    // 只需要重写此方法就可以实现，当size() > maxEntries时，删除最近最少范围的数据。
     @Override
     protected boolean removeEldestEntry(Entry<K, V> eldest) {
         return size() > maxEntries;
