@@ -1,9 +1,9 @@
 package shuo.laoma.concurrent.c66;
 
 public class CounterThreadSeachal extends Thread {
-    Counter4 counter;
+    CounterSeachal counter;
 
-    public CounterThreadSeachal(Counter4 counter) {
+    public CounterThreadSeachal(CounterSeachal counter) {
         this.counter = counter;
     }
 
@@ -11,12 +11,20 @@ public class CounterThreadSeachal extends Thread {
     public void run() {
     	for(int i= 0; i<1000; i++) {
     		counter.incr();
+//            System.out.println(counter.getCount());
 		}
+
+        for(int i= 0; i<10; i++) {
+            counter.decr();
+        }
+        /***
+         * 989892
+         */
     }
 
     public static void main(String[] args) throws InterruptedException {
         int num = 1000;
-        Counter4 counter = new Counter4();
+        CounterSeachal counter = new CounterSeachal();
         Thread[] threads = new Thread[num];
         for (int i = 0; i < num; i++) {
             threads[i] = new CounterThreadSeachal(counter);
@@ -25,8 +33,6 @@ public class CounterThreadSeachal extends Thread {
         for (int i = 0; i < num; i++) {
             threads[i].join();
         }
-
-
         System.out.println(counter.getCount());
     }
 }
