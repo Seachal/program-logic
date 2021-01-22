@@ -70,6 +70,11 @@ https://github.com/swiftma/program-logic/blob/master/src/shuo/laoma/cls/c14
 
 https://github.com/swiftma/program-logic/tree/master/src/shuo/laoma/cls/c15
 
+
+4.2 继承的细节， 这里有个容易出错的情况。
+
+https://github.com/swiftma/program-logic/tree/master/src/shuo/laoma/cls/c16
+
 4.3 继承实现的基本原理
 
 https://github.com/swiftma/program-logic/tree/master/src/shuo/laoma/cls/c17

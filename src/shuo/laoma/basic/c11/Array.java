@@ -10,7 +10,8 @@ public class Array {
 
 	public static void main(String[] args) {
 	    int[] arr = {10,20,30,40};
-//		 这种写法是错误的int[] arr2 = new int[2]{2,3};
+//		arr2t 这种写法是错误的
+//	    int[] arr2t = new int[2]{2,3};
 	    int[] arr2 = new int[]{2,3};
 	    reset(arr);
 	    for(int i=0;i<arr.length;i++){

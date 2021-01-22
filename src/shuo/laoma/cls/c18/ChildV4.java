@@ -1,6 +1,7 @@
 package shuo.laoma.cls.c18;
 
 public class ChildV4 {
+//	优先使用组合而非继承
 	private BaseV1 base;
 	private long sum;
 
