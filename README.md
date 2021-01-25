@@ -22,6 +22,7 @@ https://item.jd.com/12299018.html
 * 并发：shuo.laoma.concurrent
 * 正则表达式：shuo.laoma.regex
 * Java 8新特性：shuo.laoma.java8
+*  反射 注解 动态代理 类加载机制 shuo.laoma.dynamic 
 
 QQ交流群：574974775，备注"编程"
 
