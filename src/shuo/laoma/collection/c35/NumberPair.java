@@ -1,5 +1,14 @@
 package shuo.laoma.collection.c35;
 
+/**
+ * 8.1.5类型参数的限定
+ * @param <U>
+ * @param <V>
+ *
+ *
+ */
+
+// 可以定义一个子类 Number Pair,限定两个类型参数必须为 Number
 public class NumberPair<U extends Number, V extends Number> extends Pair<U, V> {
 
     public NumberPair(U first, V second) {
