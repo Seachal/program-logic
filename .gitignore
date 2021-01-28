@@ -8,5 +8,5 @@
 *.iml
 out
 gen
-/build/
 /.idea/
+/build

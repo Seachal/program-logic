@@ -56,37 +56,51 @@ public class DynamicArray<E> {
         }
     }
 
+    public void copyTo01(DynamicArray<E> dest) {
+        for (int i = 0; i < size; i++) {
+            dest.add(get(i));
+        }
+    }
+
 
     public static <D, S extends D> void copy(DynamicArray<D> dest, DynamicArray<S> src) {
-		for (int i = 0; i < src.size(); i++) {
-			dest.add(src.get(i));
-		}
-	}
-
-	public static <D> void copy2(DynamicArray<D> dest, DynamicArray<? extends D> src){
-		for(int i=0;i<src.size();i++) {
-			dest.add(src. get(i));
-		}
-	}
-
-
-        /**
-         * @param args
-         */
-        public static void main (String[]args){
-            DynamicArray<Number> numbers = new DynamicArray<>();
-            DynamicArray<Integer> ints = new DynamicArray<>();
-            ints.add(100);
-            ints.add(34);
-            numbers.addAll(ints);
-
-
-//
-//		DynamicArray<Integer> ints1= new DynamicArray<>() ;
-//		DynamicArray<? extends Number> numbers1= ints1;
-//		Integer a =200;
-//		numbers.addAll(a);
-
+        for (int i = 0; i < src.size(); i++) {
+            dest.add(src.get(i));
         }
+    }
+
+    public static <D> void copy2(DynamicArray<D> dest, DynamicArray<? extends D> src) {
+        for (int i = 0; i < src.size(); i++) {
+            dest.add(src.get(i));
+        }
+    }
+
+
+    /**
+     * @param args
+     */
+    public static void main(String[] args) {
+        DynamicArray<Number> numbers = new DynamicArray<>();
+        DynamicArray<Integer> ints = new DynamicArray<>();
+        ints.add(100);
+        ints.add(34);
+        numbers.addAll(ints);
+
+
+        DynamicArray<Integer> ints1 = new DynamicArray<>();
+        DynamicArray<? extends Number> numbers1 = ints1;
+        Integer a = 200;
+//        主要是因为 add 的限制，'DynamicArray<? extends Number> numbers1 = ints1;' 没报错
+//        numbers1.add(a);
+//        numbers1.addAll(a);
+
+
+//        ints.copyTo01(ints1);
+//        ints.copyTo01(numbers);
+
+
+        ints.copyTo(numbers);
 
     }
+
+}

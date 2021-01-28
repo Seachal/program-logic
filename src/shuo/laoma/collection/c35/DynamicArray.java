@@ -47,18 +47,28 @@ public class DynamicArray<E> {
         return oldValue;
     }
 
+//    8.1.5类型参数的限定 3:上界为其他类型参数
     public <T extends E> void addAll(DynamicArray<T> c) {
+//
         for (int i = 0; i < c.size; i++) {
             add(c.get(i));
         }
     }
 
 //	 seachal annotaion  根据 8.1.5 添加一些代码，此写法numbers.addAll(ints);处会提示编译错误
-//	public void addAll(DynamicArray<E> c){
-//		for (int i = 0; i < c.size; i++) {
-//			add(c.get(i));
-//		}
-//	}
+	public void addAll01(DynamicArray<E> c){
+		for (int i = 0; i < c.size; i++) {
+			add(c.get(i));
+		}
+	}
+
+// 错误写法
+//    public void  <T> addAll02(DynamicArray<T extends E> c) {
+//        for (int i = 0; i < c.size; i++) {
+//            add(c.get(i));
+//        }
+//    }
+
 
     //	此写法可以和   public <T extends E> void addAll(DynamicArray<T> c) 达到同样的效果，
 //  两种写法有什么区别呢？
@@ -67,6 +77,9 @@ public class DynamicArray<E> {
             add(c.get(i));
         }
     }
+
+
+
 
 
     /**
@@ -79,6 +92,30 @@ public class DynamicArray<E> {
         ints.add(100);
         ints.add(34);
         numbers.addAll(ints);
+
+
+//        numbers.addAll01(ints);// 会提示编译错误
+
+/*
+最后一行就是合法的,这时, Dynamicarray<Integer.>中就会出现 Double类型的值,而这显然破坏了Java泛型关于类型安全的保证
+        DynamicArray<Integer> ints0= new DynamicArray<>();
+        DynamicArray<Number> numbers0=ints0;//假设这行是合法的
+        numbers0.add(new Double(12.34));
+*/
+
+
+
+/*    8.2.2 理解通配符
+        DynamicArray<Integer> ints2 = new DynamicArray<>();
+        DynamicArray<? extends  Number> numbers2 = new DynamicArray<>();
+        ints2.add(100);
+        ints2.add(34);
+        Integer a = 20;
+        numbers2.add(a);
+        numbers2.add((Number) a);
+        numbers2.add((Object) a);
+        numbers2.addAll(ints2);*/
+
 
     }
 

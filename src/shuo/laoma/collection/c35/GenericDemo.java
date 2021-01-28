@@ -6,7 +6,7 @@ import org.apache.poi.ss.formula.functions.T;
 public class GenericDemo {
 
 	/**
-	 * 泛型方法
+	 * 泛型方法  ，这个方法就是一个泛型方法,类型参数为T,放在返回值前面
 	 * @param arr
 	 * @param elm
 	 * @param <T>
@@ -23,7 +23,8 @@ public class GenericDemo {
 	}
 
 	/**
-	 *  泛型方法
+	 *  泛型方法 ,  <U,V> 定义泛型方法（makePair的参数）参数类型， Pair<U,V>定义了 return 类型(返回类型)
+	 *  <U,V> 约束 makePair(U first, V second) 的参数类型
 	 * @param first
 	 * @param second
 	 * @param <U>
@@ -38,6 +39,7 @@ public class GenericDemo {
 
 	/**
 	 * 泛型接口
+	 * 8.1.5类型参数的限定 2 上界为某个接口
 	 * @param arr
 	 * @param <T>
 	 * @return
