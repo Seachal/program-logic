@@ -1,4 +1,6 @@
-package shuo.laoma.dynamic.c85;
+package shuo.laoma.dynamic.c85.di;
+
+import shuo.laoma.dynamic.c85.di.SimpleInject;
 
 import java.lang.reflect.Field;
 

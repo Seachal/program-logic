@@ -11,7 +11,7 @@ import java.util.Map;
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;
-import shuo.laoma.dynamic.c85.SimpleInject;
+import shuo.laoma.dynamic.c85.di.SimpleInject;
 
 public class CGLibContainer {
 	public static enum InterceptPoint {

@@ -1,4 +1,7 @@
-package shuo.laoma.dynamic.c85;
+package shuo.laoma.dynamic.c85.di;
+
+import shuo.laoma.dynamic.c85.di.SimpleInject;
+import shuo.laoma.dynamic.c85.di.SimpleSingleton;
 
 import java.lang.reflect.Field;
 import java.util.Map;
@@ -21,6 +24,7 @@ public class SimpleContainer2 {
 		}
 		return obj;
 	}
+
 
 	public static <T> T getInstance(Class<T> cls) {
 		try {

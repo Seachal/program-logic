@@ -1,6 +1,6 @@
 package shuo.laoma.dynamic.c86;
 
-import shuo.laoma.dynamic.c85.SimpleInject;
+import shuo.laoma.dynamic.c85.di.SimpleInject;
 
 public class ServiceA {
 

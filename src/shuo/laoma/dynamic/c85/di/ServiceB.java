@@ -1,4 +1,4 @@
-package shuo.laoma.dynamic.c85;
+package shuo.laoma.dynamic.c85.di;
 
 @SimpleSingleton
 public class ServiceB {
